@@ -15,7 +15,7 @@ def _get_int_env(name: str, default: int, *, minimum: int = 1) -> int:
     try:
         value = int(raw_value)
     except ValueError as exc:
-        raise ValueError(f"{name} must be an integer number of minutes") from exc
+        raise ValueError(f"{name} must be an integer") from exc
 
     if value < minimum:
         raise ValueError(f"{name} must be at least {minimum}")
